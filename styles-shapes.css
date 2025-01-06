@@ -1,0 +1,53 @@
+.logo{
+    position: relative;
+}
+.circle{
+    position: absolute;
+    width: 600px;
+    height: 600px;
+    background-color: transparent;
+    border: 24px solid white;
+    border-radius: 50%;
+    z-index: 1;
+    margin-top: -231px;
+    margin-left: -60px;
+    clip-path: inset(0 160px 0 0);    
+}
+.circle1{
+    width: 160px;
+    height: 160px;
+    background-color: transparent;
+    border: 25px solid white;
+    border-radius: 50%;
+    margin-top: 180px;
+    margin-left: 267px;
+    position: absolute;
+    z-index: 3;    
+}
+.triangle {
+    --r:150px; /* border radius */
+  
+    width: 600px;
+    aspect-ratio: 1/cos(30deg);
+    --_g:calc(tan(60deg)*var(--r)) bottom var(--r),red 98%,#0000 101%;
+    -webkit-mask:
+      conic-gradient(from -30deg at 50% calc(200% - 3*var(--r)/2),#000 60deg,#0000 0)
+       0 100%/100% calc(100% - 3*var(--r)/2) no-repeat,
+      radial-gradient(var(--r) at 50% calc(2*var(--r)),#000 98%,#0000 101%),
+      radial-gradient(var(--r) at left  var(--_g)),
+      radial-gradient(var(--r) at right var(--_g));
+    clip-path: polygon(50% 0,100% 100%,0 100%);
+    background: linear-gradient(45deg,rgb(7, 112, 153),#098fce);
+    position: absolute;
+    z-index: 0;
+  }
+  .eye{
+    width: 22px;
+    height: 22px;
+    background-color: white;    
+    border-radius: 50%;
+    margin-top: 200px;
+    margin-left: 215px;
+    position: absolute;
+    z-index: 3;
+  }
